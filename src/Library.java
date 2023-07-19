@@ -39,7 +39,7 @@ public class Library extends Book {
             System.out.println("Írd be a könyv címét");
             Scanner searchedTitle = new Scanner(System.in);
             for (Book book : books) {
-                if (book.getTitle().equals(searchedTitle) && book.) {
+                if (book.getTitle().equals(searchedTitle) && book.getQuantity()>0) {
                     System.out.println(" A kért cím alapján a könyvtárban elérhető könyv: " + book.toString());
                 }
                 System.out.println();
@@ -53,7 +53,7 @@ public class Library extends Book {
             System.out.println("Írd be a keresett műfajt");
             Scanner searchedCategory = new Scanner(System.in);
             for (Book book : books) {
-                if (book.getCategory().equals(searchedCategory)) {
+                if (book.getCategory().equals(searchedCategory)&&book.getQuantity()>0) {
                     System.out.println(" A kért műfaj alapján a könyvtárban elérhető könyv: " + book.toString());
                 }
                 System.out.println();
@@ -65,6 +65,7 @@ public class Library extends Book {
     }
 
     public void borrowBook() {
+
 
     }
 
